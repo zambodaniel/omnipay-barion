@@ -6,7 +6,7 @@
         "psr-4": { "Omnipay\\Barion\\" : "src/" }
     },
     "require": {
-        "omnipay/common": "3.0.x-dev"
+        "omnipay/common": "^3.0"
     },
     "require-dev": {
     },
@@ -14,11 +14,10 @@
         {
             "name": "kiuka",
             "email": "kiuka@kiuka.hu"
+        },
+        {
+            "name": "Daniel Zambo",
+            "email": "zambodaniel@gmail.com"
         }
-    ],
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    }
+    ]
 }
