@@ -139,14 +139,12 @@ class PurchaseRequest extends AbstractRequest
     public function sendData($data)
     {
         try {
-            $httpRequest = $this->httpClient->post(
+            $httpRequest = $this->httpClient->request(
+                'POST',
                 $this->getEndpoint(),
-                [
-                    'Content-Type' => 'application/json',
-                ],
+                ['Content-Type' => 'application/json'],
                 \json_encode($data)
             );
-
             $httpResponse = (array)\json_decode($httpRequest->getBody()->getContents());
         } catch (\Exception $e) {
             $httpResponse = [
